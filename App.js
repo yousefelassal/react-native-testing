@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 import ImageViewer from './components/ImageViewer';
 import Button from './components/Button';
+import IconButton from './components/IconButton';
+import CircleButton from './components/CircleButton';
 
 const PlaceholderImage = require('./assets/images/background-image.png')
 
@@ -21,7 +23,7 @@ export default function App() {
 
     if(!result.canceled) {
       setSelectedImage(result.assets[0].uri);
-      showAppOptions(true);
+      setShowAppOptions(true);
     } else {
       alert('You did not select an image.');
     }
@@ -95,3 +97,5 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
+
+
