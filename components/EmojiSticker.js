@@ -62,7 +62,7 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
           <AnimatedImage
             source={stickerSource}
             resizeMode="contain"
-            style={{ width: imageSize, height: imageSize }}
+            style={[imageStyle, { width: imageSize, height: imageSize }]}
           />
         </TapGestureHandler>
       </AnimatedView>
