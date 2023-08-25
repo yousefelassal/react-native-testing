@@ -42,11 +42,12 @@ export default function EmojiSticker({ imageSize, stickerSource }) {
 
   const onDoubleTap = useAnimatedGestureHandler({
     onActive: () => {
-      if(scaleImage.value !== imageSize * 2){
-        scaleImage.value = scaleImage * 2;
+      if (scaleImage.value !== imageSize * 2) {
+        scaleImage.value = scaleImage.value * 2;
       }
-    }
-  })
+    },
+  });
+  
 
   const imageStyle = useAnimatedStyle(() => {
     return {
